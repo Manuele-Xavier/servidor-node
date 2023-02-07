@@ -1,0 +1,28 @@
+{
+  "name": "servidor-node",
+  "version": "1.0.0",
+  "description": "servidor em node",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Manuele-Xavier/servidor-node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Manuele-Xavier/servidor-node/issues"
+  },
+  "homepage": "https://github.com/Manuele-Xavier/servidor-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.1"
+  }
+}
