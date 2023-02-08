@@ -28,6 +28,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 //pegando pela variavel de ambiente
 const port = process.env.PORT
 
+//definindo um endpoint
+app.get("/", (require, response)=>{
+    response.send("Hello World")
+})
+
 app.post("/login", (require, response)=>{
     const {email, password} = require.body
     console.log(require.body)
