@@ -8,11 +8,14 @@ import path from "path"
 //importando dotenv
 import * as dotenv from 'dotenv'
 dotenv.config()
+import cors from 'cors';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
 const app = express()
-
+app.use(cors({
+    origin: '*'
+}));
 //utilizando para enviar arquivos na resposta
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -24,8 +27,6 @@ app.use(bodyParser.urlencoded({ extended: false }))
 
 //pegando pela variavel de ambiente
 const port = process.env.PORT
-
-//definindo um endpoint
 
 app.post("/login", (require, response)=>{
     const {email, password} = require.body
