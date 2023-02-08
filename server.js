@@ -5,6 +5,9 @@ import express from "express"
 import bodyParser from "body-parser"
 //import path
 import path from "path"
+//importando dotenv
+import * as dotenv from 'dotenv'
+dotenv.config()
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
 
@@ -19,8 +22,8 @@ const cadastro = []
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 
-//definindo uma porta
-const port = 3000
+//pegando pela variavel de ambiente
+const port = process.env.PORT
 
 //definindo um endpoint
 
